@@ -28,4 +28,12 @@ var country = "Namibia"
 var age = 30
 
 
+var firstName = "john", lastName = "Peter", maritalStatus = "married", country = "Namibia", age = 30;
+
+var myAge = 30;
+var yourAge = 90;
+
+function ages() {
+    console.log("I am " + myAge + " years old ", " and you are " + yourAge + " years old")
+}
 

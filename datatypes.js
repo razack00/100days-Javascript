@@ -1,3 +1,5 @@
+
+// datatypes
 var string = "string"
 var boolean = true
 var nothing
