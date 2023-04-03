@@ -34,6 +34,6 @@ var myAge = 30;
 var yourAge = 90;
 
 function ages() {
-    console.log("I am " + myAge + " years old ", " and you are " + yourAge + " years old")
+    console.log(`I am ${myAge} years old and you are ${yourAge} years old`) 
 }
 
