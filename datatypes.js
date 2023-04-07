@@ -21,3 +21,5 @@ let numbers = [2,3,4]
 
 console.log(nums == numbers)
 
+//objects
+
