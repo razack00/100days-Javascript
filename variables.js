@@ -25,7 +25,7 @@ var firstName = "John"
 var lastName = "Peter"
 var maritalStatus = "married"
 var country = "Namibia"
-var age = 30
+// var age = 30
 
 
 var firstName = "john", lastName = "Peter", maritalStatus = "married", country = "Namibia", age = 30;
@@ -33,7 +33,13 @@ var firstName = "john", lastName = "Peter", maritalStatus = "married", country =
 var myAge = 30;
 var yourAge = 90;
 
-function ages() {
+function age() {
     console.log(`I am ${myAge} years old and you are ${yourAge} years old`) 
 }
+
+
+var dateOfBirth = 1998
+var currentYear = 2023
+
+console.log(`I am ${currentYear-dateOfBirth} years old`)
 
