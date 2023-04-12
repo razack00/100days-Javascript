@@ -35,8 +35,6 @@ var changeString = '30 days of javascript'
 
 console.log(changeString.replace("javascript", "python"))
 
-// checkEmail("hello@gmail.com")
-
 let email = "hello@gmail.com"
 email = email.trim()
 let emailIsValid =(email.includes(".") && email.includes("@"))
@@ -47,7 +45,7 @@ console.log(!emailIsValid && "email is not valid")
 
 // email validation
 function checkEmail(email) {
-    email.trim()
+    email = email.trim()
     if (email.includes('@') && email.includes(".com")) {
         console.log("hello there email valid")
     }
@@ -57,3 +55,5 @@ function checkEmail(email) {
 }
 
 checkEmail("razack@gmail.com")
+
+//  
