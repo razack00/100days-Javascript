@@ -48,3 +48,36 @@ console.log('year five', 2023 - yearsOfBirth[4] )
 
 //objects
 
+let stOjd = {
+    firstName: 'peter',
+    lastName: 'mikel',
+    yearOfBirth: 1998,
+    course: [
+        {
+        courseName: 'Graphic Design',
+        coef: 3,
+        marks: 18,
+        Teacher: 'James Fox'
+        },
+        {
+        courseName: 'Graphic Design',
+        coef: 3,
+        marks: 18,
+        Teacher: 'James Fox'
+        }
+],
+    isMarried: false,
+    dayOfCleaning: 'wednesday',
+    tell: +23753670081,
+    mail: 'petermikel@gmail.com',
+    skills: ['Basketball', 'HTML', 'CSS', 'JS'],
+    parents: [
+        {
+        firstName: "papapi",
+        lastName: "harry"
+        }
+    ]
+}
+
+console.log(stOjd)
+
