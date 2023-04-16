@@ -3,7 +3,6 @@
 // Exercises: Level 1
 
 // 1. Declare firstName, lastName, country, city, age, isMarried, year variable and assign value to it and use the typeof operator to check different data types.
-const { is } = require("express/lib/request")
 
 let firstName = "John"
 let lastName = "Peter"
@@ -113,7 +112,9 @@ console.log((new Date().getTime()))
 
 // Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
 
-// let base = prompt('enter base',)
-// let height = prompt("enter base", '5')
-// let area = 0.5 * base * height
-// console.log(area)
+function promptMe() {
+    let base = prompt('enter base')
+    let height = prompt('enter height')
+    let area = 0.5 * base * height
+    document.querySelector('h1').innerText = area
+}
