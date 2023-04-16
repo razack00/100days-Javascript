@@ -26,11 +26,6 @@ console.log(parseInt(9.8) == 10)
 
 
 
-// // Exercise Day 3
-// var h = "hello, your, at"
-// console.log(h.split(','))
-
-
 var changeString = '30 days of javascript'
 
 console.log(changeString.replace("javascript", "python"))
