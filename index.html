@@ -5,16 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <script defer>
+        function dateOfBirth() {
+            let now = new Date().getFullYear()
+            let year = parseInt(window.prompt('enter your year of birth'))
+            let age = now - year
+            if(age < 21){
+                alert(`${age} not eligible`)
+            }else if( age >= 21) {
+                alert(`you are ${age} so you are eligible to vote`)
+            }
+            else {
+                alert('invalid year, enter a valid year please')
+                let year = parseInt(window.prompt('enter your year of birth'))
+            }
+        }
+
+        function changeGreeting() {
+            const currentGreeting = document.querySelector('h1')
+            if(currentGreeting.innerText === 'Hello!') {
+                currentGreeting.innerText = 'GoodBye'
+                document.querySelector('.b').innerText = 'Greet'
+            } else {
+                currentGreeting.innerText = 'Hello!'
+                document.querySelector('.b').innerText = 'Bye'
+            }
+        }
+
+       
+
+        let counter = 0
+        function count() {
+                counter += 1
+                counter == 10 ? alert("hello"):document.querySelector('h3').innerText = counter
+                
+                console.log(counter)
+        }
+    </script>
 </head>
 <body>
+    <h1>Hello!</h1>
+    <button class="b" onclick="changeGreeting()">Bye</button>
     <h2>OurAges</h2>
-    <button onclick="age()">click</button>
-    <h1>area</h1>
-    <button onclick="promptMe()">click</button>
-    <script src="Day3_exercises.js"></script>
-    <h3>perimeter</h3>
-    <button onclick="trianglePerimeter()">click</button>
-    <!-- <script src="variables.js"></script> -->
+    <button onclick="dateOfBirth()">click</button>
+    <h3>0</h3>
+    <button onclick="count()">count</button>
 </body>
 </html>
