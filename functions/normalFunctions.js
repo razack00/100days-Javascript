@@ -24,7 +24,7 @@ console.log(greet('bruce'))
 function markCalc(marks, indended, current) {
     return (marks * indended) / current
 }
-console.log(markCalc(90, 20, 100))
+console.log(markCalc(20, 20, 100))
 
 
 function checkEven(num) {
