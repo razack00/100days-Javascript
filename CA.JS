@@ -1,4 +1,5 @@
 //Question one
+//calculating date of birth and matching them to various age groups 
 let yearOfBirth = 1999
 let now = new Date()
 let age = parseInt(now.getFullYear() - yearOfBirth)
@@ -30,6 +31,7 @@ else {
 
 
 // Question 2
+// checking if à day is a working day or a weekend 
 
 let day = "sunday"
 day = day.toLowerCase().trim()
