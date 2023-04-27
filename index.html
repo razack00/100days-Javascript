@@ -1,54 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer>
-        function dateOfBirth() {
-            let now = new Date().getFullYear()
-            let year = parseInt(window.prompt('enter your year of birth'))
-            let age = now - year
-            if(age < 21){
-                alert(`${age} not eligible`)
-            }else if( age >= 21) {
-                alert(`you are ${age} so you are eligible to vote`)
-            }
-            else {
-                alert('invalid year, enter a valid year please')
-                let year = parseInt(window.prompt('enter your year of birth'))
-            }
-        }
-
-        function changeGreeting() {
-            const currentGreeting = document.querySelector('h1')
-            if(currentGreeting.innerText === 'Hello!') {
-                currentGreeting.innerText = 'GoodBye'
-                document.querySelector('.b').innerText = 'Greet'
-            } else {
-                currentGreeting.innerText = 'Hello!'
-                document.querySelector('.b').innerText = 'Bye'
-            }
-        }
-
-       
-
-        let counter = 0
-        function count() {
-                counter += 1
-                counter == 10 ? alert("hello"):document.querySelector('h3').innerText = counter
-                
-                console.log(counter)
-        }
-    </script>
+    <script defer src="counter.js"></script>
 </head>
 <body>
     <h1>Hello!</h1>
-    <button class="b" onclick="changeGreeting()">Bye</button>
-    <h2>OurAges</h2>
-    <button onclick="dateOfBirth()">click</button>
+    <button class="b">Bye</button>
     <h3>0</h3>
-    <button onclick="count()">count</button>
+    <button class="counter">count</button>
 </body>
 </html>
