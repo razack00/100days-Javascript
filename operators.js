@@ -39,3 +39,7 @@ console.log(2 !== 3)
 // Bitwise opperators
 
 //
+let d = 'erere trtere ererre'
+d = d.split(" ").join("-")
+
+console.log(d)
