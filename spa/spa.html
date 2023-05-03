@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Harvest outreach</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer>
+        let switchPage = (newPage) => {
+            const pages = document.querySelectorAll('.page')
+            pages.forEach((page) => {
+                page.style.display = "none"
+            })
+            const currentPage = document.querySelector(`.${newPage}`)
+
+            // currentPage.className !== 'home' && (document.querySelectorAll('nav li').style.color = "#555")
+
+        currentPage.style.display = "block"
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            switchPage("section-1")
+            document.querySelectorAll('nav li').forEach((li) => {
+                li.onclick = (e) => {
+                    const page = e.target.dataset.section
+                    if(li !== page) {
+                        switchPage(page)
+                    }
+                }
+            })
+        })
+        // document.addEventListener('DOMContentLoaded', () => {
+        // // changing colors using buttons
+        //     document.querySelectorAll('li').forEach(li => {
+        //         li.onclick = () => {
+        //             console.log(li)
+        //         let page = document.querySelector('body').innerHTML = `.${li.dataset.section}`
+        //         console.log(page)
+        //         // document.querySelector(`${page}`).style.display = 'block';
+        //         }
+        //     })
+        // let showPage = (newPage) => {
+
+        // }
+    // })
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" data-section="section-1">Home</a></li>
+            <li><a href="#" data-section="section-2">Livestream</a></li>
+            <li><a href="#" data-section="section-3">Sermons</a></li>
+            <li><a href="#" data-section="section-4">About Us</a></li>
+        </ul>
+    </nav>
+    <section class="page section-1">
+        <!-- <video src="./images/The.Last.of.Us.S01E03.480p.WEB-DL.x264.Pahe.SoftSub.MeloMovie.mkv" autoplay muted controls></video> -->
+        <div class="nav-container">
+            <div class="logo-container">
+                <img class="logo" src="./images/logo1.png" alt="logo">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Experiencing-God <br> Together</h1>
+            <button class="hero-btn">Watch Livestream Now</button>
+        </div>
+    </section>
+
+    <section class="page section-2">
+        <div class="cards">
+            <div class="card">
+                <div class="location-icon">
+                    <img src="./images/location.png" alt="location icon">
+                </div>
+                <div class="card-content">
+                    <h3>Locations</h3>
+                    <p>Esono City Damas Acacia beside MTN <br> Youande - Cameroon</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="location-icon">
+                    <img src="./images/location.png" alt="location icon">
+                </div>
+                <div class="card-content">
+                    <h3>Service Times</h3>
+                    <p>5:00PM to 7:30PM on Tuesday and Friday 9:00AM to 11:30AM on Sunday.</p>
+                </div>
+            </div>
+        </div>
+        <p class="p-text">We Love <span class="text-accent">Peop</span> and we will Love to bring God to Glory</p>
+    </section>
+
+    <section class="page section-3">
+        <div class="experience-section">
+            <div class="single-card">
+                <span>5</span><span class="slash">/</span><p>Years serving</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page section-4">
+        <div class="cards">
+            <div class="card card1">
+            </div>
+            <div class="card card2">
+                <div class="card-content-mission">
+                    <h2>Our Mission</h2>
+                    <p>The mission of HOMI is to spread the gospel of Christ to the ends of the earth, prepare the church for the return of Christ, equip the Saints in their respective domains in life, excel in their careers, financially and reign in other sections of life.</p>
+                    <a class="about-btn" href="#">About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
