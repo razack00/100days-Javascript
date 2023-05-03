@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greet User</title>
     <script defer>
+        //program that greets user depending on input given
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('form').onsubmit = (event) => {
                 event.preventDefault();
                 const username = document.querySelector('#username').value 
                 document.querySelector('p').textContent = `hello ${username}`
             }
-            
+        
+        // changing colors using buttons
         document.querySelectorAll('.btn').forEach(button => {
             button.onclick = () => {
             document.querySelector('h3').style.color = button.dataset.color;
             }
         })
 
-        document.querySelector('.blue').onclick = () => {
-            document.querySelector('h3').style.color = 'blue'
-        }
-        document.querySelector('.red').onclick = () => {
-            document.querySelector('h3').style.color = 'red'
-        }
-        document.querySelector('.green').onclick = () => {
-            document.querySelector('h3').style.color = 'green'
-        }
+        //changing colors using downdown
+        document.querySelector('select').onchange = function() {
+            document.querySelector('#h_color').style.color = this.value
+        } // document.querySelector('select').onchange = (e) => {document.querySelector('#h_color').style.color = e.target.value}
+
+        // changing colors on key up
+        // document.querySelector('#colorinput').onkeyup = (e) => {
+        //     document.querySelector('#h_color').style.color = e.target.value
+        // }
+        
+        document.querySelector('#colorChange').onchange = function() {
+            document.querySelector('.s_color').style.color = this.value
+        } 
     })
     </script>
 </head>
@@ -43,5 +49,28 @@
     <button class="btn" data-color="blue">blue</button>
     <button class="btn" data-color="red">red</button>
     <button class="btn" data-color="green">green</button>
+
+    <h2 id="h_color">Change My Color</h2>
+    <select name="select" id="select">
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+    </select>
+
+    
+    <!-- <input type="text" name="color" list="colors" id="colorinput">
+    <datalist id="colors">
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+    </datalist><br><br> -->
+    
+
+    <p class="s_color">choose color</p>
+    <input type="color" list="colors" name="color" id="colorChange">
+    <datalist id="colors">
+    </datalist>
 </body>
 </html>
