@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.btn').forEach(button => {
+            button.onclick = () => {
+                document.querySelector('h3').style.color = button.dataset.color;
+            }
+        })
+
+        document.querySelector('select').onchange = function() {
+            document.querySelector('h3').style.color = this.value
+        }
+
+        const helloText = document.querySelector('h3');
+        const colorlist = document.querySelector('#colorinput');
+        const custom = document.querySelector('#custom');
+
+        colorlist.onchnage= (e) => {
+            helloText.style.color = e.target.value;
+        }
+
+        colorlist.onkeyup = e => {
+            helloText.style.color = e.target.value;
+        }
+
+        custom.onclick = () =>{
+            if(custom.textContent !== 'legacy colors') {
+                //change the display of the input tag to make it visible
+
+            colorlist.style.display = "inline";
+            //change the display of the datalist to make it visible
+            document.querySelector('#colors_select').style.display = "none";
+            //change the text of the button
+            custom.textContent = "legacy colors"
+        }else{
+            //change the display of the input tag to make it invisible
+            colorlist.style.display = "none";
+            //change the display of the datalist to make it visible
+            document.querySelector('#colors_select').style.display = "inline";
+            //change the text of the button
+            custom.textContent = '+ custom color';
+        }
+        }
+
+        colorlist.style.display = "none";
+    })
+           
+
+    </script>
+</head>
+<body>
+    <h3>Hello BRUCE</h3>
+    <select name="colors_select" id="colors_select">
+        <option value="blue">blue</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="purple">purple</option>
+        <option value="gold">gold</option>
+    </select>
+  
+
+
+<!--ASSIGNMENT-->
+    <!--all events and their listeners-->
+
+</body>
+</html>
