@@ -15,8 +15,6 @@
 // function name(name){
 //     return `Hello ${name}`
 // }
-
-// console.log(name('Rasty'))
 // console.log(name('Razack'))
 
 // function maricles(marks, indended, current,) {
