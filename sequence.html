@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2></h2>
+    <div>
+        <form action="">
+            <h1>ProBet</h1>
+            <input type="number" name="amount" id="amount" placeholder="amount">
+            <input type="number" name="deposit" id="deposit" placeholder="Deposit amount">
+            <input type="submit" value="Check">
+        </form>
+    </div>
+    <script defer>
+        let form = document.querySelector("form")
+        let stakes = 0
+        let stake = document.querySelector("#deposit").value
+        let accountBalance = document.querySelector("#amount").value
+        
+        form.onsubmit = () => {
+            while(accountBalance > stake) {
+                console.log(`stake = ${stake}`)
+                accountBalance -= stake
+                console.log(`Balance: ${accountBalance}`)
+                stake += stake
+                stakes ++
+            }
+            console.log(stakes)
+        }
+
+    </script>
+</body>
+</html>
