@@ -5,32 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+        h3 {
+            color: rgb(255, 255, 255);
+            font-weight: 400;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            width: 90%;
+            padding-block: 14px;
+            font-size: 20px;
+        }
+
+        p {
+            padding: 6px;
+        }
+
+        .container {
+            width: 60%;
+            min-width: 400px;
+            margin: auto;
+            background-color: rgb(12, 13, 40);
+            padding: 14px;
+        }
+
+        input {
+            padding: 5px;
+            width: 29.3%;
+        }
+
+        .roundsContainer {
+            display: flex;
+            align-items: end;
+            height: fit-content;
+            gap: 4px;
+        }
+
+        @media (max-width: 748px){
+            .container{
+                width: 90%
+            }
+        } 
+    </style>
 </head>
 <body>
-    <h2></h2>
-    <div>
+    <div class="container">
         <form action="">
-            <h1>ProBet</h1>
+            <h1 style="color: white; padding-block: 15px; text-align: center;">ProBet Calc</h1>
             <input type="number" name="amount" id="amount" placeholder="amount">
-            <input type="number" name="deposit" id="deposit" placeholder="Deposit amount">
+            <input type="number" name="deposit" id="deposit" placeholder="Total amount">
             <input type="submit" value="Check">
-        </form>
+        </form>  
+        <div class="details">
+            <div class='stakes'></div>
+            <div class="balance"></div>
+            <div class="roundsContainer">
+                <h3>Rounds: </h3>
+                <strong class="rounds"></strong>
+            </div>
+        </div>
     </div>
     <script defer>
         let form = document.querySelector("form")
         let stakes = 0
-        let stake = document.querySelector("#deposit").value
-        let accountBalance = document.querySelector("#amount").value
+        let stake = Number(document.querySelector("#amount").value)
+        let accountBalance = Number(document.querySelector("#deposit").value)
         
-        form.onsubmit = () => {
+        const roundsContainer = document.querySelector('.roundsContainer')
+        roundsContainer.style.display = "none"
+        form.onsubmit = e => {
+            e.preventDefault()
+            roundsContainer.style.display= "flex"
             while(accountBalance > stake) {
-                console.log(`stake = ${stake}`)
+                const stakeAmount = document.createElement('p')
+                stakeAmount.innerText = `stake: ${stake}`
+                document.querySelector('.stakes').appendChild(stakeAmount)
+
                 accountBalance -= stake
-                console.log(`Balance: ${accountBalance}`)
+                const balance = document.createElement('p')
+                balance.innerText = `Account: ${accountBalance}`
+                document.querySelector('.balance').appendChild(balance)
                 stake += stake
                 stakes ++
             }
-            console.log(stakes)
+            document.querySelector(".rounds").innerText = stakes
         }
 
     </script>
