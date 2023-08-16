@@ -83,7 +83,7 @@
         form.onsubmit = e => {
             e.preventDefault()
             roundsContainer.style.display= "flex"
-            while(accountBalance > stake) {
+            while(stake <= accountBalance) {
                 const stakeAmount = document.createElement('p')
                 stakeAmount.innerText = `stake: ${stake}`
                 document.querySelector('.stakes').appendChild(stakeAmount)
@@ -92,11 +92,11 @@
                 const balance = document.createElement('p')
                 balance.innerText = `Account: ${accountBalance}`
                 document.querySelector('.balance').appendChild(balance)
-                stake += stake
+                stake *= 2
                 stakes ++
             }
             document.querySelector(".rounds").innerText = stakes
-        }
+        } 
 
     </script>
 </body>
