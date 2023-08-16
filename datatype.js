@@ -64,7 +64,6 @@ let stOjd = {
 ],
     isMarried: false,
     dayOfCleaning: 'wednesday',
-    tell: +23753670081,
     mail: 'petermikel@gmail.com',
     skills: ['Basketball', 'HTML', 'CSS', 'JS'],
     parents: [
@@ -87,6 +86,7 @@ if (coursesOffered.length > 1) {
         console.log(`${course.courseName} : ${course.marks}`)
     })
 }
+
 else {
     console.log(`${stOjd.firstName} offers ${coursesOffered.length} course`)
 }
