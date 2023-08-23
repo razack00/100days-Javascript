@@ -1,13 +1,17 @@
-array = [1, 3, 10, 11, 14]
-goal = 13
 
-let found = false
-for(let i = 0; i < array.length; i++) {
-    for(let j = 0; j < array.length; j++) {
-        if(array[i] + array[j] == 13) {
-            console.log(array[i], array[j])
-            found = true
+// twoSum([6,3,2,], 9)
+
+var twoSum = function(nums, target) {
+    let flag = false
+    for(let i = 0; i < nums.length; i++) {
+        for(let j = 0; j < nums.length; j++) {
+            if(i != j && nums[i] + nums[j] == target) {
+                flag = true
+                console.log([i, j])
+            }
         }
-    }
-    if(found){break}
-}
+        if(flag)break
+    }    
+};
+
+twoSum([3,5, 3], 6)
