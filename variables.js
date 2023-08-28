@@ -1,45 +1,62 @@
+const obj = {
+  name: "John Doe",
+  age: 30,
+};
 
-// Declearing four variable and assigning type of (string, boolean, undefined, null)
-var string = "string"
-var boolean = true
-var nothing
-var empty = null
+// Check if the object has a property called "name".
+const hasName = "string" in obj;
+console.log("using in: ", hasName)
 
-// Declear four variables without assigning values
-var a
-var b 
-var c
-var d
-
-// Declear four variables with assigned values
-
-var day1 = "monday"
-var day2 = "tuesday"
-var day3 = "wednesday"
-var day4 = "thursday"
-
-
-// Declear variables to store your first name, last name, marital status, country and age in a multiple lines
-
-var firstName = "John"
-var lastName = "Peter"
-var maritalStatus = "married"
-var country = "Namibia"
-// var age = 30
-
-
-var firstName = "john", lastName = "Peter", maritalStatus = "married", country = "Namibia", age = 30;
-
-var myAge = 30;
-var yourAge = 90;
-
-function age() {
-    console.log(`I am ${myAge} years old and you are ${yourAge} years old`) 
+// Iterate over the object and print each property name and value.
+for (var property_name in obj) {
+  console.log(property_name, obj[property_name]);
 }
 
 
-var dateOfBirth = 1998
-var currentYear = 2023
+let h = [1, 3, 5]
 
-console.log(`I am ${currentYear-dateOfBirth} years old`)
+const hasProperty = "length" in h
+console.log(hasProperty)
 
+for(var n in h) {
+  console.log(n, h[n])
+}
+
+// function removeElement(nums, val) {
+//   let j = 0;
+//   for( let n of nums )if( n !== val ) nums[j++] = n
+//   return j, nums
+// };
+
+// console.log(removeElement([1,3,5,6,3], 5))
+
+
+// const d = [1, 2, 3, 4, 5];
+
+// // Remove all even numbers from the array.
+// const newLength = removeElements(d, function(t) {
+//   return t % 2 === 0;
+// });
+
+var removeElement = function(nums, val) {
+  let j = 0
+  for(let n of nums) {
+    if(n !== val) {
+      nums[j++] = n
+    }
+  }
+  return nums
+} 
+
+console.log(removeElement([0,2,2,3]
+  , 2))
+ 
+
+  var strStr = function(haystack, needle) {
+    if(haystack.includes(needle)) {
+      return haystack.indexOf(needle)
+    }
+    return -1
+  };
+
+  console.log(strStr(haystack = "sadbutsad", needle = "sadu"))
